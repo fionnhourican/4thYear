@@ -1,0 +1,58 @@
+int multiply (x: int ,y: int) is
+variable result: int;
+variable minus_sign: bool;
+begin
+// figure out sign of result and convert args to absolute values
+if (x < 0 & y >= 0)
+begin
+minus_sign := true;
+x := -x;
+end
+else
+begin
+if y < 0 & x >= 0
+begin
+minus_sign := true;
+y := -y ;
+end
+else
+begin
+if (x < 0) & y < 0
+begin
+minus_sign := false;
+x := -x;
+y := -y;
+end
+else
+begin
+minus_sign := false;
+end
+end
+end
+
+result := 0;
+while ( y > 0 )
+begin
+result := result + x;
+y := y - 1;
+end
+if minus_sign = true
+begin
+result := -result;
+end
+else
+begin
+skip;
+end
+return (result);
+end
+main
+begin
+variable arg1 : int;
+variable arg2 : int;
+variable result : int;
+constant five : int := 5;
+arg1 := -6;
+arg2 := five;
+result := multiply ( arg1 , arg2);
+end
