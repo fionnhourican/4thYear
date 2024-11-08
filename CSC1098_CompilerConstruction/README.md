@@ -2,12 +2,12 @@ This module will cover the compilation process, reading and parsing a structured
 
 In this module we will cover:
 
-Structure of a compiler
-Lexical analysis
-Parsing (Syntax analysis)
-Abstract syntax
-Semantic analysis
-Intermediate Representation
-Code Optimisation & Register Allocation
-Run-time Environments
-Code Generation
+- Structure of a compiler
+- Lexical analysis
+- Parsing (Syntax analysis)
+- Abstract syntax
+- Semantic analysis
+- Intermediate Representation
+- Code Optimisation & Register Allocation
+- Run-time Environments
+- Code Generation
