@@ -39,12 +39,13 @@ public class Assignment2 {
         do {
             p = generatePrime();
             q = generatePrime();
+            // Used this to ensure p & q distinct
             while (p.equals(q)) {
-                q = generatePrime(); // Ensure p and q are distinct
+                q = generatePrime();
             }
             n = calculateProduct(p, q);
             phi = calculatePhi(p, q);
-        } while (!isRelativelyPrime(E, phi));
+        } while (!isRelativelyPrime(E, phi)); // Used to ensure e relatively prime to phi(n)
 
         d = computeDecryptionExponent(E, phi);
 
@@ -137,6 +138,8 @@ public class Assignment2 {
 
     /**
      * Extended Euclidean GCD algorithm to calculate the inverse.
+     * This function was based on the notes and also the following source:
+     * https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
      * @param a The first number.
      * @param b The second number.
      * @return An array containing the GCD and the coefficients of the Bézout's identity.
@@ -218,12 +221,12 @@ public class Assignment2 {
         BigInteger d = computeDecryptionExponent(E, phi);
 
         System.out.println("Test with small values:");
-        System.out.println("Prime p: " + p);
-        System.out.println("Prime q: " + q);
-        System.out.println("Product n: " + n);
-        System.out.println("Euler's Totient phi(n): " + phi);
-        System.out.println("Is e relatively prime to phi(n): " + relativelyPrime);
-        System.out.println("Decryption exponent d: " + d);
+        System.out.println("Prime p: " + p); // Expected: 11
+        System.out.println("Prime q: " + q); // Expected: 13
+        System.out.println("Product n: " + n); // Expected: 143
+        System.out.println("Euler's Totient phi(n): " + phi); // Expected: 120
+        System.out.println("Is e relatively prime to phi(n): " + relativelyPrime); // Expected: true
+        System.out.println("Decryption exponent d: " + d); // Expected: 113
         System.out.println();
     }
 
