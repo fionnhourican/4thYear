@@ -1,0 +1,8 @@
+main:
+a = 5
+b = 10
+t1 = a + b
+a = t1
+t2 = a - b
+b = t2
+call _exit, 0

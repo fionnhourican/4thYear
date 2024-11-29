@@ -1,0 +1,18 @@
+variable a : int;
+variable b : int;
+variable c : bool;
+
+main
+begin
+    a := 5;
+    b := 10;
+    c := true;
+
+    // Valid arithmetic operations
+    a := a + b;
+    a := a - b;
+
+    // Invalid arithmetic operations
+    a := a + c;  // Error: Both operands must be integer variables or integer constants
+    a := b - c;  // Error: Both operands must be integer variables or integer constants
+end

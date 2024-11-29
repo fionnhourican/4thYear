@@ -1,0 +1,13 @@
+variable a : int;
+variable b : int;
+variable c : int;
+
+main
+begin
+    a := 5;
+    b := 10;
+    a := a + b;
+    c := a - b;
+    c := a + 3;
+    c := 7 - b;
+end

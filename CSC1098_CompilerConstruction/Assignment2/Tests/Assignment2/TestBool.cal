@@ -1,0 +1,43 @@
+variable a : int;
+variable b : int;
+variable c : bool;
+variable d : bool;
+
+main
+begin
+    a := 5;
+    b := 10;
+    c := true;
+    d := false;
+
+    // Valid comparison operations
+    if (a = b) begin
+        a := 1;
+    end else begin
+    end
+
+    if (a != b) begin
+        a := 2;
+    end else begin
+    end
+
+    if (a < b) begin
+        a := 3;
+    end else begin
+    end
+
+    if (a <= b) begin
+        a := 4;
+    end else begin
+    end
+
+    if (a > b) begin
+        a := 5;
+    end else begin
+    end
+
+    if (a >= b) begin
+        a := 6;
+    end else begin
+    end
+end

@@ -1,0 +1,5 @@
+main
+begin
+i := 1;
+i := test_fn (i);
+end

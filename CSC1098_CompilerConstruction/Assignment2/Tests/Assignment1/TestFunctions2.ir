@@ -1,0 +1,114 @@
+multiply:
+param x
+param y
+x = null
+y = null
+if x<0 goto L1
+goto L2
+L1:
+minus_sign = true
+x = null
+goto L3
+L2:
+if y<0 goto L4
+goto L5
+L4:
+minus_sign = true
+y = null
+goto L6
+L5:
+if x<0 goto L7
+goto L8
+L7:
+minus_sign = false
+x = null
+y = null
+goto L9
+L8:
+minus_sign = false
+L9:
+minus_sign = false
+x = null
+y = null
+minus_sign = false
+L6:
+minus_sign = true
+y = null
+if x<0 goto L10
+goto L11
+L10:
+minus_sign = false
+x = null
+y = null
+goto L12
+L11:
+minus_sign = false
+L12:
+minus_sign = false
+x = null
+y = null
+minus_sign = false
+L3:
+minus_sign = true
+x = null
+if y<0 goto L13
+goto L14
+L13:
+minus_sign = true
+y = null
+goto L15
+L14:
+if x<0 goto L16
+goto L17
+L16:
+minus_sign = false
+x = null
+y = null
+goto L18
+L17:
+minus_sign = false
+L18:
+minus_sign = false
+x = null
+y = null
+minus_sign = false
+L15:
+minus_sign = true
+y = null
+if x<0 goto L19
+goto L20
+L19:
+minus_sign = false
+x = null
+y = null
+goto L21
+L20:
+minus_sign = false
+L21:
+minus_sign = false
+x = null
+y = null
+minus_sign = false
+result = 0
+L22:
+if y>0 goto L23
+goto L24
+L23:
+goto L22
+L24:
+if minus_sign==true goto L25
+goto L26
+L25:
+result = null
+goto L27
+L26:
+L27:
+result = null
+return result
+main:
+arg1 = 6
+arg2 = null
+param arg1,arg2
+t2 = call multiply, 1
+result = t2
+call _exit, 0

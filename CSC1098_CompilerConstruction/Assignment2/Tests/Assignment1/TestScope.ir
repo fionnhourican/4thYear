@@ -1,0 +1,11 @@
+test_fn:
+param x
+i =2
+
+return x
+main:
+i = 3
+param i
+t2 = call test_fn, 1
+i = t2
+call _exit, 0

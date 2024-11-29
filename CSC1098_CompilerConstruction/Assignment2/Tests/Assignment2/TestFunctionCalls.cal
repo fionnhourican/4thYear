@@ -1,0 +1,35 @@
+variable a : int;
+variable b : int;
+variable c : int;
+int unused_fn ( x : int) is
+variable a : int;
+begin
+return ( x );
+end
+
+int used_fn ( x : int) is
+variable b : int;
+begin
+return ( x + 1 );
+end
+
+int multiple_calls_fn ( x : int) is
+variable c : int;
+begin
+return ( x - 2 );
+end
+
+main
+begin
+variable a : int;
+variable b : int;
+variable c : int;
+
+a := 5;
+b := used_fn(a); // Function called once
+c := multiple_calls_fn(a); // Function called multiple times
+c := multiple_calls_fn(c); // Function called multiple times
+
+// unused_fn is declared but not called
+// variable b is not read from
+end

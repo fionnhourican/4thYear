@@ -1,0 +1,23 @@
+variable i : int;
+int test_fn ( x : int) is
+    variable i : int;
+    variable y : int;
+    begin
+        i := 1;
+        if (i > 0) begin
+            i := i - 2;
+            y := i - 5;
+            end
+        else begin
+            i := i + 2;
+            y := i + 5;
+            end
+    return ( y );
+end
+
+main
+    begin
+        variable i : int;
+        i := 3;
+        i := test_fn (i);
+end

@@ -1,0 +1,28 @@
+// Test: Duplicate variable declaration in the same scope
+variable i : int;
+variable i : int; // Error: Variable i is already declared in the current scope
+
+// Test: Duplicate function declaration in the same scope
+int test_fn ( x : int ) is
+    variable i : int;
+    begin
+        i := 2;
+        return ( x );
+    end
+
+int test_fn ( x : int ) is // Error: Function test_fn is already declared in the current scope
+    variable i : int;
+    begin
+        i := 2;
+        return ( x );
+    end
+
+// Test: Duplicate variable declaration in nested scopes
+main
+begin
+    variable i : int;
+    variable i : int; // Error: Variable i is already declared in the current scope
+    begin
+    j := 1;
+    end
+end

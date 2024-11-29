@@ -1,0 +1,23 @@
+variable i : int;
+int test_fn ( x : int, y : int, z : int ) is
+variable i : int;
+begin
+i := 2;
+return ( x );
+end
+
+int test_fn2 ( x : int) is
+variable i : int;
+begin
+i := 2;
+return ( x );
+end
+main
+begin
+variable i : int;
+variable f : int;
+i := 3;
+i := test_fn (i);
+i := test_fn2 (i);
+
+end

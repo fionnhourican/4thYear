@@ -1,0 +1,12 @@
+main:
+a = 5
+b = 10
+t1 = a + b
+a = t1
+t2 = a - b
+c = t2
+t3 = a + 3
+c = t3
+t4 = 7 - b
+c = 7
+call _exit, 0

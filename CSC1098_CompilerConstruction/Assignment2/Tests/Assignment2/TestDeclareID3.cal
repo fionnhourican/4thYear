@@ -1,0 +1,8 @@
+main
+    begin
+        variable i : int;
+            variable j : int;
+            j := 2;
+        end
+        j := 3; // Error: Variable j not declared
+    end

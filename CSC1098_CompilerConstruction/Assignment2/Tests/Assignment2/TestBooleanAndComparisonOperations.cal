@@ -1,0 +1,77 @@
+variable a : int;
+variable b : int;
+variable c : bool;
+variable d : bool;
+
+main
+begin
+    a := 5;
+    b := 10;
+    c := true;
+    d := false;
+
+    // Valid comparison operations
+    if (a = b) begin
+        a := 1;
+    end else begin
+    end
+
+    if (a != b) begin
+        a := 2;
+    end else begin
+    end
+
+    if (a < b) begin
+        a := 3;
+    end else begin
+    end
+
+    if (a <= b) begin
+        a := 4;
+    end else begin
+    end
+
+    if (a > b) begin
+        a := 5;
+    end else begin
+    end
+
+    if (a >= b) begin
+        a := 6;
+    end else begin
+    end
+
+    // Invalid comparison operations
+    if (a = c) begin
+        a := 7;  // Error: Both operands of a comparison operator must be of the same type
+    end else begin
+    end
+
+    if (b != d) begin
+        a := 8;  // Error: Both operands of a comparison operator must be of the same type
+    end else begin
+    end
+    /*
+    // Valid boolean operations
+    if (c & d) begin
+        a := 9;
+    end else begin
+    end
+
+    if (c | d) begin
+        a := 10;
+    end else begin
+    end
+
+    // Invalid boolean operations
+    if (a & c) begin
+        a := 11;  // Error: Both operands of a boolean operator must be boolean variables or boolean constants
+    end else begin
+    end
+
+    if (b | d) begin
+        a := 12;  // Error: Both operands of a boolean operator must be boolean variables or boolean constants
+    end else begin
+    end
+    */
+end

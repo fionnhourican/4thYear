@@ -1,0 +1,21 @@
+// Test: Undeclared variable usage
+variable i : int;
+int test_fn ( x : int ) is
+    variable i : int;
+    begin
+        i := 2;
+        return ( x );
+end
+int test_fn ( x : int ) is
+    variable i : int;
+    begin
+        i := 2;
+        return ( x );
+end
+main
+    begin
+        variable i : int;
+        i := 1;
+        y := 3;
+        i := test_fn (i);
+end

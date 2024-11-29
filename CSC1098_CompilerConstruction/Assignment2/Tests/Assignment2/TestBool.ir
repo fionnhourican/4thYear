@@ -1,0 +1,54 @@
+main:
+a = 5
+b = 10
+c = true
+d = false
+if a==b goto L1
+goto L2
+L1:
+a = 1
+goto L3
+L2:
+L3:
+a = 1
+if a!=b goto L4
+goto L5
+L4:
+a = 2
+goto L6
+L5:
+L6:
+a = 2
+if a<b goto L7
+goto L8
+L7:
+a = 3
+goto L9
+L8:
+L9:
+a = 3
+if a<=b goto L10
+goto L11
+L10:
+a = 4
+goto L12
+L11:
+L12:
+a = 4
+if a>b goto L13
+goto L14
+L13:
+a = 5
+goto L15
+L14:
+L15:
+a = 5
+if a>=b goto L16
+goto L17
+L16:
+a = 6
+goto L18
+L17:
+L18:
+a = 6
+call _exit, 0

@@ -1,0 +1,29 @@
+variable a : int; // Declared but not used
+variable b : int; // Written to but not read from
+variable c : int; // Read from but not written to
+variable d : int; // Both written to and read from
+variable f : int; // Declared but not used in the main scope
+variable g : int; // Written to but not read from
+variable h : int; // Read from but not written to
+variable i : int; // Both written to and read from
+
+int test_fn ( x : int) is
+variable e : int; // Declared but not used in the function scope
+begin
+e := 2; // Written to in the function scope
+return ( x ); // Read from in the function scope
+end
+
+main
+begin
+variable d : int; // Both written to and read from
+variable f : int; // Declared but not used in the main scope
+variable g : int; // Written to but not read from
+variable h : int; // Read from but not written to
+variable i : int; // Both written to and read from
+
+b := d; // Written to in the main scope
+i := 4; // Written to in the main scope
+i := test_fn (i); // Read from and written to in the main scope
+h := i; // Read from in the main scope
+end

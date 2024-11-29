@@ -1,0 +1,13 @@
+variable a : int;
+variable b : int;
+
+main
+begin
+    a := 5;
+    b := 10;
+
+    // Valid arithmetic operations
+    a := a + b;
+    b := a - b;
+
+end
